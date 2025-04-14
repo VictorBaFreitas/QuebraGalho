@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <link
+      id="favicon"
+      rel="icon"
+      type="image/png"
+      href="./assets/LogoIcon.jpg"
+    />
+    <title>Ativação</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/3.0.1/jspdf.umd.min.js"
+      integrity="sha512-ad3j5/L4h648YM/KObaUfjCsZRBP9sAOmpjaT2BDx6u9aBrKFp7SbeHykruy83rxfmG42+5QqeL/ngcojglbJw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/relatory.js"></script>
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="mt-4 mb-4">
+      <header>
+        <div class="container">
+          <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="index.html"
+              ><img src="./assets/LogoConnect.png" alt="Logo Connect"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse d-flex justify-content-end"
+              id="navbarNav"
+            >
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" href="index.html">Ativação</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="./html/cto.html">Bater CTO</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <form class="container">
+          <div class="m-3">
+            <label for="userId" class="form-label">ID e Nome do Cliente</label>
+            <input type="text" class="form-control" id="userId" required />
+          </div>
+          <div class="m-3">
+            <label for="contrato" class="form-label">Contrato do Cliente</label>
+            <input type="text" class="form-control" id="contrato" required />
+          </div>
+          <div class="m-3">
+            <label for="plano" class="form-label">Plano do Cliente</label>
+            <input
+              type="text"
+              class="form-control"
+              id="plano"
+              value="Mbps"
+              required
+            />
+          </div>
+          <div class="m-3">
+            <label for="ordemServico" class="form-label"
+              >ID Ordem de Serviço</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="ordemServico"
+              required
+            />
+          </div>
+          <div class="m-3">
+            <label for="cidade" class="form-label">Cidade</label>
+            <select class="form-select" id="cidade" required>
+              <option selected>Selecione a cidade do cliente</option>
+              <option value="1">Aparecida d'Oeste - SP</option>
+              <option value="2">Ituiutaba - MG</option>
+              <option value="3">Jales - SP</option>
+              <option value="4">Nhandeara - SP</option>
+              <option value="5">Santa Fé do Sul - SP</option>
+              <option value="6">Santa Rita d'Oeste - SP</option>
+              <option value="7">Suzanápolis - SP</option>
+              <option value="8">Três Fronteiras - SP</option>
+              <option value="9">Valentim Gentil - SP</option>
+              <option value="10">Votuporanga - SP</option>
+              <option value="11">Tanabi - SP</option>
+              <option value="12">Mirassol - SP</option>
+              <option value="13">Monte Aprazível - SP</option>
+            </select>
+          </div>
+          <div class="m-3">
+            <label for="tecnico" class="form-label">Nome do Técnico</label>
+            <input type="text" class="form-control" id="tecnico" required />
+          </div>
+          <div class="m-3">
+            <label for="os" class="form-label">Modelo de OS</label>
+            <select class="form-select" id="os" required>
+              <option selected>Selecione o tipo de OS</option>
+              <option value="1">Ativação</option>
+              <option value="2">Troca de Endereço</option>
+              <option value="3">Sinal Alto</option>
+              <option value="4">Rede Interna</option>
+              <option value="5">Link Loss</option>
+              <option value="6">Lentidão</option>
+              <option value="7">Desconexão</option>
+              <option value="8">Acesso Remoto</option>
+              <option value="9">Dificuldades Wi-fi</option>
+              <option value="10">Retenção de Cancelamento</option>
+              <option value="11">Troca PTR</option>
+              <option value="12">Fixar Drop</option>
+              <option value="13">Suporte Preventivo</option>
+              <option value="14">Alteração de Senha</option>
+              <option value="15">Configuração de Equipamento</option>
+              <option value="16">Equipamento Danificado</option>
+              <option value="17">Organizar Equipamentos</option>
+              <option value="18">Rechamada Infinity</option>
+              <option value="19">Rechamada Terceirizada</option>
+              <option value="20">Análise para Solução</option>
+              <option value="21">Troca de Equipamento</option>
+              <option value="22">Transferência Fibra</option>
+              <option value="23">Transferência Rádio</option>
+              <option value="24">Segundo Ponto</option>
+              <option value="25">Upgrade</option>
+              <option value="26">Mudança de Cômodo</option>
+              <option value="27">Reversão</option>
+            </select>
+          </div>
+          <div class="m-3">
+            <label for="ctoIndex" class="form-label">CTO</label>
+            <input type="number" class="form-control" id="ctoIndex" required />
+          </div>
+          <div class="m-3">
+            <label for="porta" class="form-label">Porta</label>
+            <input type="number" class="form-control" id="porta" required />
+          </div>
+          <div class="m-3">
+            <label for="mac" class="form-label">MAC</label>
+            <input type="text" class="form-control" id="mac" required />
+          </div>
+          <div class="m-3">
+            <label for="sinalCto" class="form-label">Sinal CTO</label>
+            <input
+              type="text"
+              class="form-control"
+              id="sinalCto"
+              value="-"
+              required
+            />
+          </div>
+          <div class="m-3">
+            <label for="sinalInterno" class="form-label">Sinal Interno</label>
+            <input
+              type="text"
+              class="form-control"
+              id="sinalInterno"
+              value="-"
+              required
+            />
+          </div>
+          <div class="m-3">
+            <label for="sinalOnu" class="form-label">Sinal ONU</label>
+            <input
+              type="text"
+              class="form-control"
+              id="sinalOnu"
+              value="-"
+              required
+            />
+          </div>
+          <div class="m-3">
+            <label for="testeVelocidade" class="form-label"
+              >Teste de Velocidade</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="testeVelocidade"
+              required
+              value="ms - Mbps/Down - Mbps/Up"
+            />
+          </div>
+          <div class="m-3 form-check">
+            <label class="form-check-label" for="fotoDrop"> Foto Drop </label>
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="fotoDrop"
+              required
+            />
+          </div>
+          <div class="m-3 form-check">
+            <label class="form-check-label" for="fotoMac"> Foto MAC </label>
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="fotoMac"
+              required
+            />
+          </div>
+          <div class="m-3 form-check">
+            <label class="form-check-label" for="acessoRemoto">
+              Acesso remoto
+            </label>
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="acessoRemoto"
+              required
+            />
+          </div>
+          <div class="m-3 form-check">
+            <label class="form-check-label" for="fotoPtr"> Foto PTR </label>
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="fotoPtr"
+              required
+            />
+          </div>
+          <div class="m-3 form-check">
+            <label class="form-check-label" for="lacreOnu"> Lacre ONU </label>
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="lacreOnu"
+              required
+            />
+          </div>
+          <div class="m-3 form-check">
+            <label class="form-check-label" for="equipamentoInstalado">
+              Equipamento instalado
+            </label>
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="equipamentoInstalado"
+              required
+            />
+          </div>
+          <div class="m-3 form-check">
+            <label class="form-check-label" for="adesivo"> Adesivo </label>
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="adesivo"
+              required
+            />
+          </div>
+          <div class="m-3 form-check">
+            <label class="form-check-label" for="fixadoTermo">
+              Fixado na parede ou Termo
+            </label>
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="fixadoTermo"
+              required
+            />
+          </div>
+          <div class="m-3 form-check">
+            <label class="form-check-label" for="usoDrop"> Assinatura </label>
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="usoDrop"
+              required
+            />
+          </div>
+          <button id="gerarValidado" class="btn btn-warning mx-2">
+            Gerar Validado
+          </button>
+          <button id="gerarPDF" class="btn btn-primary mx-2">Gerar PDF</button>
+          <button id="gerarAtendimento" class="btn btn-success mx-2">
+            Gerar Atendimento
+          </button>
+        </form>
+      </main>
+      <footer>
+        <p class="text-center mt-5">Desenvolvido por Victor Freitas</p>
+        <div class="dropdown position-fixed bottom-0 end-0 p-4 bd-mode-toggle">
+          <button
+            class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+            id="bd-theme"
+            type="button"
+            aria-expanded="false"
+            data-bs-toggle="dropdown"
+            aria-label="Toggle theme"
+          >
+            <ion-icon
+              id="theme-icon"
+              name="sunny-outline"
+              style="font-size: 1.2em"
+            ></ion-icon>
+            <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+          </button>
+          <ul
+            class="dropdown-menu dropdown-menu-end shadow"
+            aria-labelledby="bd-theme-text"
+          >
+            <li>
+              <button
+                type="button"
+                class="dropdown-item d-flex align-items-center"
+                data-bs-theme-value="light"
+              >
+                <ion-icon
+                  name="sunny-outline"
+                  class="me-2 opacity-50"
+                  style="font-size: 1.2em"
+                ></ion-icon>
+                Light
+                <ion-icon
+                  class="check-icon ms-auto d-none"
+                  name="checkmark-outline"
+                  style="font-size: 1.2em"
+                ></ion-icon>
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                class="dropdown-item d-flex align-items-center"
+                data-bs-theme-value="dark"
+              >
+                <ion-icon
+                  name="moon-outline"
+                  class="me-2 opacity-50"
+                  style="font-size: 1.2em"
+                ></ion-icon>
+                Dark
+                <ion-icon
+                  class="check-icon ms-auto d-none"
+                  name="checkmark-outline"
+                  style="font-size: 1.2em"
+                ></ion-icon>
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                class="dropdown-item d-flex align-items-center"
+                data-bs-theme-value="auto"
+              >
+                <ion-icon
+                  name="contrast-outline"
+                  class="me-2 opacity-50"
+                  style="font-size: 1.2em"
+                ></ion-icon>
+                Auto
+                <ion-icon
+                  class="check-icon ms-auto d-none"
+                  name="checkmark-outline"
+                  style="font-size: 1.2em"
+                ></ion-icon>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
