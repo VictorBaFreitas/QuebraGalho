@@ -67,8 +67,7 @@ function gerarPDF(event) {
   const img = new Image();
   img.crossOrigin = "anonymous";
   img.src =
-    "https://raw.githubusercontent.com/VictorBaFreitas/ActivationSiteConnect/refs/heads/main/LogoConnect.png";
-
+    "https://raw.githubusercontent.com/VictorBaFreitas/QuebraGalho/refs/heads/main/assets/LogoConnect.png";
   img.onload = function () {
     doc.addImage(img, "PNG", 10, 10, 140, 30);
     adicionarTextoAoPDF(doc);
